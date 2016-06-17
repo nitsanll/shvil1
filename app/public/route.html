@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="route">
+  <head>
+    <meta charset="utf-8">
+    <title>get route form</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body ng-controller="segmentscontroller">
+  <main id = "routeMain">
+    <div id = "date"><p ng-repeat ="dates in datesArr.dates"> {{dates}}<br><br> </p></div>
+    <div id = "route"> <p ng-repeat="segment in segs.segments"> <b>נקודת התחלה: </b>{{segment.seg_start}} <br> <b>נקודת סיום: </b> {{segment.seg_end}}</p></div>
+    <div class = "clear"> </div>
+    <!--<table class="table table-striped" ng-repeat ="dates in datesArr.dates" ng-repeat="segment in segs.segments">
+      <tbody>
+      <tr>
+        <td > {{dates.day}} </td>
+        <td> <b>נקודת התחלה: </b>{{segment.seg_start}} <br> <b>נקודת סיום: </b> {{segment.seg_end}}</td>
+      </tr>
+      </tbody>
+    </table>--> 
+  </main>
+    <script src="js/lib/angular/angular.min.js"></script>
+    <script src="js/getroutedetails.js"></script>   
+  </body>
+</html>
